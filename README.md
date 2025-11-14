@@ -73,8 +73,8 @@ MiniFinCorp is a comprehensive financial help application that serves as a bridg
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/KrishnaDs007/minifincorp.git
-   cd minifincorp
+   git clone https://github.com/KrishnaDs007/MiniFinCorp.git
+   cd MiniFinCorp
    ```
 
 2. **Install dependencies**
