@@ -1,3 +1,12 @@
+/**
+ * App Styles
+ * 
+ * @description Main application styles
+ * @author Krishna Devashish
+ * @email krishnadevashish17@gmail.com
+ * @github https://github.com/KrishnaDs007
+ */
+
 .app-body {
   background-image: url('./assets/img/bgSvg.svg');
 }

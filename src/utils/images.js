@@ -1,35 +1,32 @@
-import Logo from '../assets/img/logo.png'
-import ProfilePic from '../assets/img/kd.png'
-import ProfileFilledPic from '../assets/img/profile_pic.jpg'
-import AngularIcon from '../assets/img/ic_angular.png'
-import ReactIcon from '../assets/img/ic_react.png'
-import JsIcon from '../assets/img/ic_js.png'
-import SassIcon from '../assets/img/ic_sass.png'
-import TsIcon from '../assets/img/ic_ts.png'
-import BackGround from '../assets/img/bgSvg.svg'
-import HtmlIcon from '../assets/img/ic_html5.png'
-import CssIcon from '../assets/img/ic_css3.png'
-import WebpackIcon from '../assets/img/ic_webpack.png'
-import ProductImg1 from '../assets/img/product_img1.png'
-import ProductImg2 from '../assets/img/product_img2.jpg'
-import ProductImg3 from '../assets/img/product_img3.jpg'
+/**
+ * Image Assets Module
+ *
+ * @description Central image imports and exports for the application
+ * @author Krishna Devashish
+ * @email krishnadevashish17@gmail.com
+ * @github https://github.com/KrishnaDs007
+ */
+
+import LoanImg1 from "../assets/img/pl_banner.webp";
+import LoanImg2 from "../assets/img/loan_img2.webp";
+import LoanImg3 from "../assets/img/loan_img1.jpg";
+import InsuranceImg from "../assets/img/insurance_bg.jpg";
+import LoanImg4 from "../assets/img/loan_img.png";
+import LoanImg5 from "../assets/img/bl_banner.jpg";
+import Director1 from "../assets/img/shivam.jpeg";
+import Director2 from "../assets/img/aayushi.jpeg";
+import Logo from "../assets/img/logo.png";
 
 const Image = {
-  Logo,
-  ProfilePic,
-  ProfileFilledPic,
-  AngularIcon,
-  ReactIcon,
-  JsIcon,
-  SassIcon,
-  TsIcon,
-  BackGround,
-  HtmlIcon,
-  CssIcon,
-  WebpackIcon,
-  ProductImg1,
-  ProductImg2,
-  ProductImg3,
-}
+	Logo,
+	LoanImg1,
+	LoanImg2,
+	LoanImg3,
+	InsuranceImg,
+	LoanImg4,
+	LoanImg5,
+	Director1,
+	Director2,
+};
 
 export default Image;

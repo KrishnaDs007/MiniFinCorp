@@ -1,18 +1,21 @@
+/**
+ * Header Component
+ *
+ * @description Navigation header component with responsive menu
+ * @author Krishna Devashish
+ * @email krishnadevashish17@gmail.com
+ * @github https://github.com/KrishnaDs007
+ */
+
 import React, { useLayoutEffect, useState } from "react";
 import image from "../../utils/images";
 import { AiOutlineHome, AiOutlineUser } from "react-icons/ai";
-import {
-	BiBook,
-	BiMessageSquareDetail,
-	BiSolidMoon,
-	BiSolidSun,
-} from "react-icons/bi";
-import { RiServiceLine } from "react-icons/ri";
+import { BiMessageSquareDetail } from "react-icons/bi";
+import { RiMoneyRupeeCircleLine } from "react-icons/ri";
 
 const Header = ({ currentNav, setCurrentNav }) => {
 	const [size, setSize] = useState([0, 0]);
 	const [menuOpen, setMenuOpen] = useState(false);
-	const [currentTheme, setCurrentTheme] = useState("dark");
 	useLayoutEffect(() => {
 		const updateSize = () => {
 			setSize([window.innerWidth, window.innerHeight]);
@@ -44,6 +47,24 @@ const Header = ({ currentNav, setCurrentNav }) => {
 							<span className='nav-item-satus'></span>
 						</li>
 						<li
+							className={
+								"nav-item" + (currentNav === "services" ? " active" : "")
+							}
+							onClick={() => {
+								setMenuOpen(false);
+								setCurrentNav("services");
+								document.getElementById("servicesSection").scrollIntoView({
+									behavior: "smooth",
+									block: "start",
+									inline: "nearest",
+								});
+							}}
+						>
+							<RiMoneyRupeeCircleLine className='nav-item-icon' />
+							<span className='nav-item-title'>Services</span>
+							<span className='nav-item-satus'></span>
+						</li>
+						<li
 							className={"nav-item" + (currentNav === "about" ? " active" : "")}
 							onClick={() => {
 								setMenuOpen(false);
@@ -57,42 +78,6 @@ const Header = ({ currentNav, setCurrentNav }) => {
 						>
 							<AiOutlineUser className='nav-item-icon' />
 							<span className='nav-item-title'>About</span>
-							<span className='nav-item-satus'></span>
-						</li>
-						<li
-							className={
-								"nav-item" + (currentNav === "career" ? " active" : "")
-							}
-							onClick={() => {
-								setMenuOpen(false);
-								setCurrentNav("career");
-								document.getElementById("careerSection").scrollIntoView({
-									behavior: "smooth",
-									block: "start",
-									inline: "nearest",
-								});
-							}}
-						>
-							<RiServiceLine className='nav-item-icon' />
-							<span className='nav-item-title'>Career</span>
-							<span className='nav-item-satus'></span>
-						</li>
-						<li
-							className={
-								"nav-item" + (currentNav === "project" ? " active" : "")
-							}
-							onClick={() => {
-								setMenuOpen(false);
-								setCurrentNav("project");
-								document.getElementById("projectSection").scrollIntoView({
-									behavior: "smooth",
-									block: "start",
-									inline: "nearest",
-								});
-							}}
-						>
-							<BiBook className='nav-item-icon' />
-							<span className='nav-item-title'>Projects</span>
 							<span className='nav-item-satus'></span>
 						</li>
 						<li
@@ -115,28 +100,6 @@ const Header = ({ currentNav, setCurrentNav }) => {
 						</li>
 					</ul>
 				</nav>
-				<span
-					className={
-						"header__theme-switch" +
-						(currentTheme === "dark" ? " disabled" : " enabled")
-					}
-					onClick={() => {
-						if (currentTheme === "dark") {
-							document.body.classList.remove("dark");
-							document.body.classList.add("light");
-							setCurrentTheme("light");
-						} else {
-							document.body.classList.remove("light");
-							document.body.classList.add("dark");
-							setCurrentTheme("dark");
-						}
-					}}
-				>
-					<span className='theme-switch-wrapper'>
-						<BiSolidMoon style={{ transform: "translate(-3px, -2px)" }} />
-						<BiSolidSun style={{ transform: "translate(3px, -2px)" }} />
-					</span>
-				</span>
 			</>
 		);
 	};
@@ -144,7 +107,8 @@ const Header = ({ currentNav, setCurrentNav }) => {
 	return (
 		<header className='header'>
 			<span className='header__logo-container'>
-				<img src={image.Logo} height='24px' alt='Krishn' />
+				<img src={image.Logo} height='24px' alt='MiniFincorp' />
+				<h1>MiniFincorp</h1>
 			</span>
 			{size[0] > 720 ? (
 				navContainer()

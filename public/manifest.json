@@ -1,6 +1,11 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "MiniFinCorp",
+  "name": "MiniFinCorp - Financial Services Application",
+  "description": "Your one-stop financial solution for loans, insurance, and credit services with EMI calculator",
+  "author": "Krishna Devashish",
+  "developer": "Krishna Devashish",
+  "email": "krishnadevashish17@gmail.com",
+  "version": "0.1.0",
   "icons": [
     {
       "src": "favicon.ico",
@@ -21,5 +26,6 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "categories": ["finance", "business", "productivity"]
 }

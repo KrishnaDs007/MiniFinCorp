@@ -1,3 +1,12 @@
+/**
+ * Main SCSS Styles
+ * 
+ * @description Main stylesheet with global styles and component styles
+ * @author Krishna Devashish
+ * @email krishnadevashish17@gmail.com
+ * @github https://github.com/KrishnaDs007
+ */
+
 @import './global';
 
 
@@ -23,13 +32,20 @@
     text-shadow: 2px 2px #cccc;
     cursor: default;
   }
+
+  &__sub-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin: -3rem 0 3rem 0;
+    padding-top: 2.5rem;
+    cursor: default;
+  }
 }
 
 @import '../componentes/Header/header';
 @import '../pages/Home/home';
 @import '../pages/About/about';
-@import '../pages/Career/career';
-@import '../pages/Skills/skills';
-@import '../pages/Projects/projects';
+@import '../pages/Services/services';
 @import '../pages/Contact/contact';
 @import '../componentes/Footer/footer';

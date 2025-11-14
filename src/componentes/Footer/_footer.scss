@@ -7,11 +7,17 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 footer a, footer span {
   color: var(--text-color);
+}
+
+.footer-container {
+  background-image: url('../../assets/img/bgSvg.svg');
+  background-color: var(--secondary-bg-color);
+  background-blend-mode: soft-light;
 }
 
 .footer__logo {

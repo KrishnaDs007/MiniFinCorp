@@ -5,6 +5,8 @@
   align-items: center;
   background-color: var(--secondary-bg-color);
 
+  
+
   &> div {
     position: relative;
 
@@ -123,6 +125,96 @@
     }
   }
 
+}
+
+.hero-container {
+  height: calc(100vh - 6rem);
+  min-height: 38rem;
+  width: 100%;
+  
+  .swiper-slide {
+    width: 100% !important;
+    height: 100%;
+    position: relative;
+
+    .slide-content {
+      width: 100%;
+      height: calc(100vh - 6rem);
+      min-height: 38rem;
+      position: relative;
+
+      .slide-image {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: calc(100vh - 6rem);
+        min-height: 38rem;
+        top: 0;
+      }
+
+      .slide-overlay {
+        position: absolute;
+        z-index: 2;
+        width: 50%;
+        min-width: 21rem;
+        max-width: 35rem;
+        margin: 3rem;
+        padding: 2rem;
+        border-radius: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #fff7;
+        box-shadow: 4px 4px 12px #636363;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        // filter: blur(8px);
+
+        .slide-title {
+          margin: 0;
+          font-size: 3rem;
+          color: var(--secondary-bg-color);
+        }
+
+        .slide-description {
+          margin: 0;
+          font-size: 1.25rem;
+          font-weight: 600;
+        }
+
+        .slide-suggestion {
+          margin: 0;
+          font-size: 1rem;
+          color: #333;
+          font-weight: 600;
+        }
+
+        .slide-button {
+          width: 12rem;
+          height: 4rem;
+          font-size: 1.5rem;
+          font-weight: 900;
+          border: 2px solid transparent;
+          border-radius: 0.5rem;
+          // border-color: var(--support-color);
+          // color: var(--support-color);
+          color: #fff;
+          background-color: #2194ff;
+          cursor: pointer;
+          box-shadow: 0px 0px 0px #fff;
+
+          &:hover {
+            background-color: #0084ff;
+            box-shadow: 2px 2px 5px #777;
+          }
+        }
+      }
+    }
+  }
+
+  .swiper-button-prev, .swiper-button-next, .swiper-pagination {
+    z-index: 5;
+  }
 }
 
 @keyframes profileAnimation {
